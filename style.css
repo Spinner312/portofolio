@@ -1,0 +1,398 @@
+/* ========================================= */
+/* General Styling & Font Imports */
+/* ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #4D4D4D;
+    background-color: #ffffff;
+}
+
+main {
+    padding-top: 70px; /* Memberi ruang untuk navbar fixed-top */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4D4D4D;
+}
+
+p, .text-muted {
+    color: #717171;
+    line-height: 1.6;
+}
+
+.text-success {
+    color: #4CAF4F !important;
+}
+
+/* Kustomisasi Bootstrap */
+.btn-success {
+    background-color: #4CAF4F;
+    border-color: #4CAF4F;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+/* ========================================= */
+/* Navbar */
+/* ========================================= */
+.navbar-brand .bi {
+    font-size: 1.75rem;
+    vertical-align: middle;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+}
+.nav-link {
+    color: #18191F;
+}
+.nav-link:hover, .nav-link.active {
+    color: #4CAF4F;
+}
+
+/* ========================================= */
+/* Hero Carousel */
+/* ========================================= */
+#heroCarousel .carousel-item {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+#heroCarousel h1 {
+    font-size: 3.5rem;
+}
+
+/* Styling untuk indikator (titik) carousel */
+.carousel-indicators [data-bs-target] {
+    background-color: #D6D6D6; /* Warna abu-abu untuk titik yang tidak aktif */
+    opacity: 1; /* Hapus transparansi agar lebih terlihat */
+    width: 10px; /* Sedikit lebih besar */
+    height: 10px;
+    border-radius: 100%; /* Membuatnya bulat sempurna */
+}
+
+/* Styling KHUSUS untuk indikator yang sedang aktif */
+.carousel-indicators .active {
+    background-color: #4CAF4F; /* Warna hijau yang sama dengan tema */
+}
+
+/* ========================================= */
+/* Clients Section */
+/* ========================================= */
+#clients img {
+    height: 35px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+#clients img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* ========================================= */
+/* Features Section */
+/* ========================================= */
+#features .card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(171, 190, 209, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+#features .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(171, 190, 209, 0.4);
+}
+
+/* ========================================= */
+/* Testimonial Section */
+/* ========================================= */
+/*
+/* Atur ukuran gambar utama di bagian testimonial */
+.testimonial-main-image {
+    max-width: 300px; /* Atur lebar maksimal gambar */
+    width: 100%;      /* Pastikan tetap responsif */
+}
+
+/* ========================================= */
+/* Blog Section */
+/* ========================================= */
+.blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.blog-header h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.blog-header p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.blog-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.blog-card {
+    position: relative;
+    text-align: center;
+}
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.card-content {
+    position: relative;
+    background-color: #F5F7FA;
+    padding: 1.5rem;
+    margin: 0 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(171, 190, 209, 0.4);
+    transform: translateY(-50%);
+    text-align: center;
+}
+.card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #717171;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+.card-content a {
+    color: #4CAF4F;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.card-content a:hover {
+    color: #45a049;
+}
+
+
+/* ========================================= */
+/* Footer */
+/* ========================================= */
+#footer {
+    background-color: #263238;
+}
+#footer h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+#footer a.text-muted {
+    color: #F5F7FA !important;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+#footer a.text-muted:hover {
+    opacity: 1;
+}
+#footer .social-icons a {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+#footer .social-icons a:hover {
+    color: #4CAF4F !important;
+}
+
+/* Mengatur wrapper input group */
+#footer .subscribe-form {
+    background-color: rgba(255, 255, 255, 0.2); /* Background semi-transparan */
+    border-radius: 8px; /* Sudut tumpul */
+    padding: 5px;
+}
+
+/* Mengatur tampilan kotak input */
+#footer .subscribe-form .form-control {
+    background-color: transparent; /* Hapus background putih default */
+    border: none; /* Hapus border */
+    color: #FFFFFF; /* Warna teks saat mengetik adalah putih */
+    box-shadow: none; /* Hapus efek bayangan saat input diklik */
+}
+
+/* Mengatur warna placeholder (teks "Your email address") */
+#footer .subscribe-form .form-control::placeholder {
+    color: #D9DBE1; /* Warna abu-abu terang */
+    opacity: 1;
+}
+
+/* Mengatur tombol ikon */
+#footer .subscribe-form .btn {
+    background-color: transparent; /* Hapus background tombol */
+    border: none; /* Hapus border tombol */
+    color: #FFFFFF; /* Warna ikon putih */
+    box-shadow: none; /* Hapus efek bayangan saat tombol diklik */
+}
+
+/* ========================================= */
+/* Responsive Design */
+/* ========================================= */
+@media (max-width: 991.98px) {
+    #heroCarousel h1 {
+        font-size: 2.8rem;
+    }
+    .blog-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767.98px) {
+    #heroCarousel .row {
+        flex-direction: column-reverse;
+    }
+    #heroCarousel .col-lg-6 {
+        padding: 0 !important;
+    }
+    #heroCarousel h1 {
+        font-size: 2.5rem;
+    }
+    .testimonial-card-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .testimonial-image-wrapper {
+        flex-basis: auto;
+        width: 150px;
+    }
+    .testimonial-footer-row {
+        justify-content: center;
+    }
+    .blog-cards-container {
+        grid-template-columns: 1fr;
+    }
+    .blog-header h2 {
+        font-size: 1.8rem;
+    }
+    .card-content {
+        margin: 0 1rem;
+    }
+}
+
+/* ========================================= */
+/* Footer Call-to-Action (CTA) Section */
+/* ========================================= */
+.cta-section {
+    background-color: #F5F7FA; /* Warna latar abu-abu terang, senada dengan bg-light */
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-section .container {
+    max-width: 800px; /* Batasi lebar agar teks tidak terlalu panjang */
+}
+
+.cta-section h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #263238; /* Warna abu-abu gelap untuk kontras */
+    line-height: 1.4;
+    margin-bottom: 2rem; /* Jarak antara judul dan tombol */
+}
+
+.btn-cta {
+    /* Menggunakan styling yang sama dengan .btn-success agar konsisten */
+    background-color: #4CAF4F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 14px 32px; /* Padding lebih besar untuk tombol utama */
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #45a049; /* Warna sedikit lebih gelap saat disentuh */
+}
+
+/* Di dalam @media (max-width: 767.98px) { ... } */
+
+.cta-section h1 {
+    font-size: 2rem; /* Perkecil ukuran font judul di mobile */
+}
+
+#clients .client-logo {
+    width: 120px;     /* kamu bisa ubah jadi 150px, 200px, dsb */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#clients .client-logo:hover {
+    transform: scale(1.1); /* efek zoom saat hover (opsional) */
+}
+
+/* Perbesar logo utama testimonial */
+#testimonials .main-logo {
+    width: 160px;
+    height: auto;
+}
+
+/* Perbesar semua logo client di bagian bawah */
+#testimonials .client-logo {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#testimonials .client-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Tambahan styling untuk teks testimonial */
+.testimonial-quote {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author-info p {
+    margin-bottom: 0.3rem;
+}
+
+.meet-all-link {
+    color: #007bff;
+}
+
+.meet-all-link:hover {
+    text-decoration: underline;
+}
+
+/* Gambar utama testimonial */
+#testimonials .main-logo {
+    width: 300px; /* Sebelumnya terlalu besar dengan scale */
+    height: auto;
+}
+
+/* Logo klien testimonial */
+#testimonials .client-logo {
+    width: 60px; /* Ukuran proporsional */
+    height: auto;
+    margin: 0 10px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+#testimonials .client-logo:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
